@@ -1,0 +1,3 @@
+Template.trade.helpers({ 
+});
+

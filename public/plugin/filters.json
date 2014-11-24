@@ -1,0 +1,3 @@
+[
+    { "matchExpr" : "http[s]?[:][/][/].*taobao[.]com[/]trade[/]itemlist[/]list_bought_items[.]htm.*" , "pageVisitor" : "pageVisitor_taobao_buyList.js" }
+] 

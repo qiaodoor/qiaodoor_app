@@ -1,0 +1,20 @@
+<template name="tradesList">
+  <div class="table-responsive">
+    <label>Qiao Door Data Fetch Token:</label>
+    <input type="text" class="form-control" value="{{token}}" />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Shop Name</th>
+          <th>Order No</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each trades}}
+          {{> trade}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>

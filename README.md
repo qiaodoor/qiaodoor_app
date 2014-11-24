@@ -1,5 +1,10 @@
 qiaodoor_app
 ============
+
+==============================
+Meteor Application Development
+==============================
+
 STEP 1: meteor installation
   sudo apt-get install --yes openjdk-7-jdk lib32z1 lib32stdc++6 git
   curl https://install.meteor.com/ | sh
@@ -36,7 +41,52 @@ STEP 5: support mobile application development
       
 STEP 6: customize mobile application
   project/mobile-config.js
-  
+
+================  
+Meteor Up Deploy
+================
+npm install -g mup
+
+mup.json
+
+{
+  // Server authentication info
+  "servers": [
+    {
+      "host": "www.qiaodoor.com",
+      "username": "root",
+      "password": "xxxxxxxxxxxxxxxxx"
+      // or pem file (ssh based authentication)
+      //"pem": "~/.ssh/id_dsa"
+    }
+  ],
+
+  // Install MongoDB in the server, does not destroy local MongoDB on future setup
+  "setupMongo": false,
+
+  // WARNING: Node.js is required! Only skip if you already have Node.js installed on server.
+  "setupNode": false,
+
+  // WARNING: If nodeVersion omitted will setup 0.10.31 by default. Do not use v, only version number.
+  "nodeVersion": "0.10.31",
+
+  // Install PhantomJS in the server
+  "setupPhantom": false,
+
+  // Application name (No spaces)
+  "appName": "qiaodoor",
+
+  // Location of app (local directory)
+  "app": "/home/james/qiaodoor_app",
+
+  // Configure environment
+  "env": {
+    "PORT"     : 80 , 
+    "ROOT_URL" : "http://www.qiaodoor.com" 
+  }, 
+  "deployCheckWaitTime": 15
+}
+
 ===============================
 cordova application development
 ===============================

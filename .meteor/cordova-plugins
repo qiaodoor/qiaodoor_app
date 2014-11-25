@@ -1,3 +1,3 @@
-com.qiaodoor.cordova.audiolet@https://github.com/qiaodoor/audiolet/tarball/d05a5cac302177ba3f09fadac8bd38b3fab447fe
 org.apache.cordova.file-transfer@0.4.4
+com.qiaodoor.cordova.audiolet@file://cordova-build-override/plugins/com.qiaodoor.cordova.audiolet
 

@@ -1,6 +1,6 @@
 qiaodoor_app
 ============
-
+<pre>
 ==============================
 Meteor Application Development
 ==============================
@@ -10,13 +10,29 @@ STEP 1: meteor installation
   curl https://install.meteor.com/ | sh
   meteor install-sdk android // the process would hang at end terminate it is fine
   fix_meteor_bugs
+    ~/.meteor/packages/meteor-tool/1.0.35/meteor-tool-os.linux.x86_32/tools/utils.js
+    Line  471:
+      exports.isUrlWithSha = function (x) {
+        // For now, just support http/https, which is at least less restrictive than
+        // the old "github only" rule.
+        return /^https?:\/\/.*[0-9a-f]{40}/.test(x) || /^file:\/\/.*/.test(x);
+     };
+
     ~/.meteor/packages/meteor-tool/1.0.35/meteor-tool-os.linux.x86_32/tools/commands-cordova.js
+    Line  460: // support local cordova plugin
+      if (version && utils.isUrlWithSha(version)) {
+        if ( version && version.indexOf('file://') == 0 ) {
+          pluginInstallCommand = path.join( cordovaPath , '../../..' , version.substring(7)) ;
+        } else 
+          pluginInstallCommand =
+          fetchCordovaPluginFromShaUrl(version, localPluginsPath, name);
+      }
     Line 2053:  Console.debug("Found AVDS:", avds);
                 return ['meteor']; //FIXME: avds;
     Line 2079:  if (currentApi == findApi){ //FIXME && abi == findArch) {
     Line 2758:  result = { acceptable: true }; // FIXME
                 return result;
-
+   
 STEP 2: configure linux shell
   echo "ANDROID_HOME=~/.meteor/android_bundle/android-sdk"  >> ~/.profile
   echo "ANT_HOME=~/.meteor/android_bundle/apache-ant-1.9.4" >> ~/.profile
@@ -29,6 +45,11 @@ STEP 4: add cordova plugin into project
   meteor add cordova:com.qiaodoor.cordova.audiolet@https://github.com/qiaodoor/audiolet/tarball/d05a5cac302177ba3f09fadac8bd38b3fab447fe 
   //the version number d05a5cac302177ba3f09fadac8bd38b3fab447fe can be found from github
   
+  or add local plugin as
+  meteor add cordova:com.qiaodoor.cordova.audiolet@file://relative_path_compare_with_project_path
+  e.g.:
+  meteor add cordova:com.qiaodoor.cordova.audiolet@file://cordova-build-override/plugins/com.qiaodoor.cordova.audiolet
+
 STEP 5: support mobile application development
   meteor add-platform android
   adb disconnect
@@ -163,5 +184,5 @@ STEP G: create android project from existing code qiaodoor_app/platforms/android
     cordova plugin remove com.qiaodoor.cordova.audiolet
     cordova plugin add    qiaodoor_plugins/AudioLet
     cordova build
-
+</pre>
  

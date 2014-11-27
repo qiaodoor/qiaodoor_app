@@ -5,7 +5,6 @@
 
 meteor-platform
 underscore
-iron:router
 sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
@@ -16,5 +15,36 @@ autolink
 flash-notifications
 futurescaper:futuregrapher
 d3
+meteor-publish-with-relations
 collection-models
+find-from-publication
+jquery-csv
+percolate:momentum
+percolate:momentum-iron-router
+less
+mrt:moment
+iron:core
+iron:dynamic-template
+iron:layout
+iron:router
+mrt:collection-hooks
+mrt:aws-sdk
+mrt:blocking
+dburles:counter-cache
+spacebars
+anti:fake
+dburles:factory
+aldeed:simple-schema
+tmeasday:publish-counts
+fastclick
+raix:handlebar-helpers
+mrt:underscore-string-latest
+kevbuk:moment-range
+tmeasday:paginated-subscription
+html-tools
+blaze-tools
+spacebars-compiler
+peerlibrary:blocking
+peerlibrary:aws-sdk
+launch-screen
 

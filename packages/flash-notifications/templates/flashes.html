@@ -1,0 +1,38 @@
+<template name="flashNotification">
+  {{#if show}}
+    <div class="alert alert-{{type}} alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      {{message}}
+    </div>
+  {{/if}}
+</template>
+
+<template name="flashes">
+  {{#each flashes}}
+    {{> flashItem}}
+  {{/each}}
+</template>
+
+<template name="successFlashes">
+  {{#each flashes}}
+    {{> flashItem}}
+  {{/each}}
+</template>
+
+<template name="errorFlashes">
+  {{#each flashes}}
+    {{> flashItem}}
+  {{/each}}
+</template>
+
+<template name="warningFlashes">
+  {{#each flashes}}
+    {{> flashItem}}
+  {{/each}}
+</template>
+
+<template name="infoFlashes">
+  {{#each flashes}}
+    {{> flashItem}}
+  {{/each}}
+</template>

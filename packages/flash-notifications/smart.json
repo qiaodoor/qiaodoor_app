@@ -1,0 +1,10 @@
+{
+  "name": "flash-notifications",
+  "description": "Smart Package for displaying flash notifications to the user. Integrates easily with Bootstrap styles and Iron Router",
+  "homepage": "https://github.com/spencern/flash-notifications",
+  "author": "Spencer Norman <spencern@gmail.com>",
+  "version": "0.1.0",
+  "git": "https://github.com/spencern/flash-notifications.git",
+  "packages": {
+  }
+}

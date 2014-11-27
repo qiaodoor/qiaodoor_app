@@ -1,0 +1,8 @@
+{
+  "name": "autolink",
+  "description": "autolink plugin",
+  "homepage": "https://github.com/bryanwoods/autolink-js",
+  "author": "ReneB",
+  "version": "1.0",
+  "git": "https://github.com/bryanwoods/autolink-js.git"
+}

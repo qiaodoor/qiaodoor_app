@@ -1,0 +1,3 @@
+[submodule "packages/collection-models"]
+	path = packages/collection-models
+	url = https://github.com/percolatestudio/collection-models.git

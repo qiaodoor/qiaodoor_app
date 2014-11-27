@@ -1,3 +1,15 @@
 [submodule "packages/collection-models"]
 	path = packages/collection-models
 	url = https://github.com/percolatestudio/collection-models.git
+[submodule "packages/meteor-pack"]
+	path = packages/meteor-pack
+	url = https://github.com/percolatestudio/meteor-pack.git
+[submodule "packages/find-from-publication"]
+	path = packages/find-from-publication
+	url = https://github.com/percolatestudio/find-from-publication.git
+[submodule "packages/jquery-csv"]
+	path = packages/jquery-csv
+	url = https://github.com/donskifarrell/meteor-jquery-csv.git
+[submodule "packages/meteor-publish-with-relations"]
+	path = packages/meteor-publish-with-relations
+	url = https://github.com/Goluis/meteor-publish-with-relations.git
